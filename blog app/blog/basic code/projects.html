@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Professional Summary & Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7f9f8; /* green background */
+            margin: 0;
+            padding: 0;
+            color: #222;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            background: #f6e1f5; /* softer pink instead of bright magenta */
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .summary {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #d38ac0;
+        }
+        .summary h2 {
+            margin-top: 0;
+            color: #7a2e78;
+            font-size: 2rem;
+        }
+        .summary p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4a3d4a;
+        }
+        h2 {
+            color: #7a2e78;
+            margin-bottom: 16px;
+            font-size: 2rem;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            /* remove aqua background for cleaner look */
+        }
+        .card {
+            background: #b16ca9;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+            padding: 20px;
+            flex: 1 1 250px;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: #ffe4f1;
+            font-size: 1.3rem;
+        }
+        .card p {
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: #f3d5e9;
+        }
+        @media (max-width: 700px) {
+            .cards {
+                flex-direction: column;
+            }
+            .card {
+                min-width: 100%;
+            }
+        }
+        /* Footer or tagline */
+        span {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #7a2e78;
+            letter-spacing: 1.5px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Experienced Full Stack Developer with a strong background in designing, developing, and deploying scalable web applications. Skilled in modern frontend and backend technologies, with a passion for delivering high-quality solutions and collaborating in agile teams.
+            </p>
+        </div>
+        <div>
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Project Management Dashboard</h3>
+                    <p>
+                        Developed a responsive dashboard for tracking project progress, integrating real-time updates and analytics using React and Node.js.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>E-commerce Platform</h3>
+                    <p>
+                        Built a scalable e-commerce site with secure payment integration, product catalog, and user authentication using Angular and Express.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        Designed and deployed a personal portfolio website showcasing skills, experience, and projects, optimized for SEO and mobile devices.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Portfolio Website</h3>
+                    <p>
+                        Designed and deployed a personal portfolio website showcasing skills, experience, and projects, optimized for SEO and mobile devices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <span>Vibe Coder</span>
+</body>
+</html>
+

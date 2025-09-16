@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EM Biodata</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9f9f9;
+            color: #333;
+            padding: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #0077cc;
+            letter-spacing: 1.5px;
+        }
+
+        img {
+            display: block;
+            max-width: 150px;
+            margin: 0 auto 30px auto;
+            border-radius: 50%;
+            border: 3px solid #0077cc;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: #005999;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            border-bottom: 2px solid #0077cc;
+            padding-bottom: 5px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0077cc;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f8ff;
+        }
+
+        form {
+            background-color: #f0f7ff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: inset 0 0 5px rgba(0,119,204,0.2);
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #005999;
+        }
+
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #0077cc;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            margin-top: 15px;
+            background-color: #0077cc;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005999;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>EM Biodata</h1>
+    <img src="/1.jpeg" alt="EM Photo" />
+    
+    <h2>Personal Information</h2>
+    <ul>
+        <li><strong>Name:</strong> EM</li>
+        <li><strong>Age:</strong> 25</li>
+        <li><strong>Location:</strong> Lagos, Nigeria</li>
+    </ul>
+    
+    <h2>Education</h2>
+    <ol>
+        <li>B.Sc. Computer Science</li>
+        <li>M.Sc. Software Engineering</li>
+    </ol>
+    
+    <h2>About Me</h2>
+    <p>EM is a passionate software developer with experience in web and mobile application development.</p>
+    
+    <h2>Skills</h2>
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Proficiency</th>
+            <th>Additional Info</th>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Beginner</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Advanced</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>Beginner</td>
+            <td>Vibe Coder</td>
+        </tr>
+    </table>
+
+    <form>
+        <h2>Contact Me</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <input type="submit" value="Submit" />
+
+    </form>
+      
+
+</body>
+</html>

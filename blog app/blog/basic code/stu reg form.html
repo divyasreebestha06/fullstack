@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration Form</title>
+  <style>
+    /* Embed California font */
+    @font-face {
+      font-family: 'California';
+      src: url('California.ttf') format('truetype'); /* Replace with your actual file path */
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'California', Arial, sans-serif;
+      background: linear-gradient(135deg, #fcdbde 0%, #ecacc7 100%);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      margin: 0;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      width: 400px;
+      max-width: 95vw;
+      transition: box-shadow 0.3s ease;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    .container:hover {
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #333;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 25px;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    label {
+      font-weight: 700;
+      color: #0a646f;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      user-select: none;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select {
+      padding: 14px 16px;
+      font-size: 1rem;
+      border: 2px solid #0a646f;
+      border-radius: 10px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    select:focus {
+      border-color: #1fbec1;
+      box-shadow: 0 0 8px #1fbec1;
+      outline: none;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+      align-items: center;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    .gender-group input[type="radio"] {
+      width: auto;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    .gender-group label {
+      font-weight: 600;
+      color: #0a646f;
+      cursor: pointer;
+      user-select: none;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    button {
+      padding: 16px 0;
+      background-color: #0a646f;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      margin-top: 10px;
+      letter-spacing: 0.05em;
+      font-family: 'California', Arial, sans-serif;
+    }
+
+    button:hover {
+      background-color: #147d88;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 450px) {
+      .container {
+        width: 95vw;
+        padding: 30px 25px;
+      }
+
+      button {
+        font-size: 1.1rem;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="example@mail.com" required />
+
+      <label for="course">Course Selection</label>
+      <select id="course" name="course" required>
+        <option value="" disabled selected>Select a course</option>
+        <option value="webdev">Web Development</option>
+        <option value="datasci">Data Science</option>
+        <option value="design">Graphic Design</option>
+      </select>
+
+      <label for="gender">Gender</label>
+      <div class="gender-group">
+        <input type="radio" id="male" name="gender" value="Male" required />
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="Other" />
+        <label for="other">Other</label>
+      </div>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required />
+
+      <label for="confirm_password">Confirm Password</label>
+      <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm password" required />
+
+      <button type="submit">Register</button>
+      <script>
+      document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from actually submitting
+
+      // Fetch input values
+      const fullName = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const course = document.getElementById('course').value;
+      const genderElement = document.querySelector('input[name="gender"]:checked');
+      const password = document.getElementById('password').value;
+      const c-onfirmPassword = document.getElementById('confirm_password').value;
+
+      // Check required fields
+      if (!fullName || !email || !course || !genderElement || !password || !confirmPassword) {
+        alert('Please fill in all the required fields.');
+        return;
+      }
+
+      // Check email format
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+      if (!emailPattern.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      // Check password match
+      if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        return;
+      }
+
+      // Optional: display all form data (for demonstration)
+      const gender = genderElement.value;
+
+      alert(
+        '✅ Registration Successful!\n\n' +
+        'Name: ' + fullName + '\n' +
+        'Email: ' + email + '\n' +
+        'Course: ' + course + '\n' +
+        'Gender: ' + gender
+      );
+
+      // Clear the form
+      form.reset();
+    });
+  });
+</script>
+
+    </form>
+  </div>
+</body>
+</html>
+

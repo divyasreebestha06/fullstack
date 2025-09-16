@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Divya Sree - Student Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #edd4d4;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .portfolio {
+      width: 70%;
+      background: #f2c8c8;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #4e73df;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .section {
+      margin: 30px 0;
+      width: 100%;
+    }
+
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      color: #2c3e50;
+    }
+
+    .section p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .skills ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .skills li {
+      background-color: #4e73df;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .skills li:hover {
+      background-color: #1cc88a;
+    }
+
+    .projects .project {
+      background: white;
+      margin: 15px 0;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .projects .project:hover {
+      transform: scale(1.05);
+    }
+
+    .projects .project h3 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #4e73df;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .projects .project p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background-color: #1cc88a;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #17a673;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="portfolio">
+
+      <!-- Profile Section -->
+      <img src="/1.jpeg" alt="Divya Sree" class="profile-image"> <!-- Replace with your image file -->
+      <h1>Divya Sree</h1>
+      <h2>Student </h2>
+
+      <!-- Objective Section -->
+      <div class="section">
+        <h2>Objective</h2>
+        <p>As a student with a passion for technology, my goal is to pursue a career in web development. I aim to learn and develop skills in front-end and back-end web technologies, working on real-world projects, and contributing to impactful applications. I am enthusiastic about building a strong foundation in coding and problem-solving to excel in this fast-evolving field.</p>
+      </div>
+
+      <!-- Skills Section -->
+      <div class="section skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+        </ul>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="section projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+          <h3>Personal Blog</h3>
+          <p>A personal blog website built with HTML, CSS, and JavaScript where I share my thoughts and ideas.</p>
+        </div>
+
+        <div class="project">
+          <h3>Weather App</h3>
+          <p>A weather application that fetches and displays real-time weather data using an open API.</p>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <div class="section education">
+        <h2>Education</h2>
+
+        <div class="education-item">
+          <h3>Bachelor of Science in Computer Science and Engineering with specialization of AI and ML</h3>
+          <p>SRINIVASA RAMANUJAN INSTITUTE OF TECHNOLOGY</p>
+          <p>Expected Graduation Year: 2027</p>
+        </div>
+
+        <div class="education-item">
+          <h3>INTER AT SRI CHAITANYA JUNIOR COLLEGE</h3>
+          <p>School: RISHITHA ENGLISH MEDIUM HIGH SCHOOL</p>
+          
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+      <div class="section certifications">
+        <h2>Certifications</h2>
+
+        <div class="certification-item">
+          <h3>FULL STACK MERN</h3>
+          <p>Institute: Online SMARTBRIDGE Academy</p>
+          <p>Year: 2025</p>
+        </div>
+
+        <div class="certification-item">
+          <h3>Introduction to Python Programming</h3>
+          <p>Institute: ONLINE INFOSYS</p>
+          <p>Year: 2024</p>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="section contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <footer>
+        <p>&copy; 2025 Divya Sree. All rights reserved.</p>
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>
