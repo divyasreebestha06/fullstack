@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple To-Do List</title>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: aqua;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #8777de;
+      color: #030202;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+      margin-left: 5px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #218838;
+      color: white;
+    }
+    ul {
+      margin-top: 20px;
+      padding-left: 0;
+      list-style: none;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    li {
+      margin-bottom: 10px;
+      background-color: #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+      background-color: rgb(237, 244, 103);
+    }
+    .complete-btn {
+      background-color: #28a745;
+      color: white;
+      border-radius: 3px;
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      margin-left: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .complete-btn:hover {
+      background-color: #218838;
+    }
+    .remove-btn {
+      background-color: #dc3545;
+      color: white;
+      border-radius: 3px;
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      margin-left: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .remove-btn:hover {
+      background-color: #a71d2a;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>My To-Do List</h2>
+ 
+
+  <input type="text" id="taskInput" placeholder="Enter a new task" />
+  <button id="addTaskBtn">Add Task</button>
+  <button id="clearCompletedBtn">Remove Completed Tasks</button>
+
+<ul id="todoList">
+    <!-- Tasks will be added here -->
+  
+  <li>
+    <span class="task-text">Task 1</span>
+    <div>
+      <button class="complete-btn">Completed</button>
+      <button class="remove-btn">Remove</button>
+    </div>
+  </li>
+  <li>
+    <span class="task-text">Task 2</span>
+    <div>
+      <button class="complete-btn">Completed</button>
+      <button class="remove-btn">Remove</button>
+    </div>
+  </li>
+  <li>
+    <span class="task-text">Task 3</span>
+    <div>
+      <button class="complete-btn">Completed</button>
+      <button class="remove-btn">Remove</button>
+    </div>
+  </li>
+  <li>
+    <span class="task-text">Task 4</span>
+    <div>
+      <button class="complete-btn">Completed</button>
+      <button class="remove-btn">Remove</button>
+    </div>
+  </li>
+</ul>
+
+
+  <script>
+    $(document).ready(function() {
+      // Add new task
+      $("#addTaskBtn").click(function() {
+        const task = $("#taskInput").val().trim();
+        if (task !== "") {
+          const taskHtml = `
+            <li>
+              <span class="task-text">${task}</span>
+              <div>
+                <button class="complete-btn">Completed</button>
+                <button class="remove-btn">Remove</button>
+              </div>
+            </li>`;
+          $("#todoList").append(taskHtml);
+          $("#taskInput").val("");
+        } else {
+          alert("Please enter a task.");
+        }
+      });
+
+      // Mark task as completed
+      $("#todoList").on("click", ".complete-btn", function() {
+        const li = $(this).closest("li");
+        li.toggleClass("completed");
+      });
+
+      // Remove individual task
+      $("#todoList").on("click", ".remove-btn", function() {
+        $(this).closest("li").remove();
+      });
+
+      // Remove all completed tasks
+      $("#clearCompletedBtn").click(function() {
+        $("#todoList li.completed").remove();
+      });
+    });
+  </script>
+
+</body>
+</html>
